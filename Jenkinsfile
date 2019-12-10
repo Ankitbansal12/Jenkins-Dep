@@ -11,7 +11,7 @@ node {
 	stage('ANT')
 	{
     withEnv( ["ANT_HOME=${tool antVersion}"] ) {
-    bat 'C:/Users/ankit/ant/apache-ant-1.9.14/bin/ant.bat  builderWithGitDiff'
+    bat '%ANT_HOME%/bin/ant.bat  builderWithGitDiff'
     }
     
             printf rmsg
