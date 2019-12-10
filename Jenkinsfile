@@ -11,7 +11,7 @@ node {
 	stage('checkout source')
 	{
     withEnv( ["ANT_HOME=${tool antVersion}"] ) {
-    bat '%ANT_HOME%/bin/ant.bat builderWithGitDiff'
+    bat '%ANT_HOME%\bin\ant.bat builderWithGitDiff'
     }
     
             printf rmsg
