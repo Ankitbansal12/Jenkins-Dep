@@ -3,6 +3,8 @@ import groovy.json.JsonSlurperClassic
 node {
 
     def antVersion = 'Ant'
+    jdk = tool name: 'JDK'
+    env.JAVA_HOME = "${jdk}"
 
     stage('checkout source') {
         // when running in multi-branch job, one must issue this command
